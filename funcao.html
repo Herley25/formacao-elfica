@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Herley Oliveira">
+    <title>Incluindo funções</title>
+</head>
+<body>
+    <h3>Adicionando função em meu código</h3>
+    <p>Você é bastante paciente.</p>
+</body>
+
+    <script>
+        function fazPegadinha() {
+            alert("Olá!");
+            alert("amiga!");
+            alert("Tá");
+            alert("bastante");
+            alert("entediada ?");
+            alert("Em ficar");
+            alert("Clicando em ");
+            alert("ok");
+            alert("né ?");
+
+        }
+
+        fazPegadinha();
+
+        function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();     
+        }
+
+        function calculoImc(pesoherley,alturaherley) {
+            var imc = pesoherley / (alturaherley*alturaherley);
+            return (imc);
+        }
+
+
+        var maior = 25;
+        mostra("herley tem " + maior + " anos");
+        var menor = 22;
+        mostra("heuler tem " + menor + " anos");
+        var diferenca = maior - menor
+        mostra("Nossa diferença de idade é " + diferenca + " anos");
+        mostra("=====================================================================================");
+        
+        document.write("<h3>Cálculo do IMC do herley</h3>");
+        mostra("peso: 71");
+        var pesoherley = 71;
+        mostra("altura: 1.80");
+        var alturaherley = 1.80;
+        mostra("O IMC do herley é igual a " + Math.round(calculoImc(pesoherley,alturaherley)) );
+        pulaLinha();
+        mostra("=====================================================================================");
+        
+
+
+    </script>
+</html>
