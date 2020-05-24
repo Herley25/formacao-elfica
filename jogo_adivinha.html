@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Herley Oliveira">
+    <title>Jogo do adivinha</title>
+</head>
+<body>
+    <h2>JOGO DO ADIVINHA</h2>
+</body>
+
+    <script>
+         function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+
+        function sorteia(n) {
+            return Math.round(Math.random() * n);
+        }
+        // aprendendo a trabalhar com condições.
+        var numeroPensado = sorteia(10); // faz com que a escolha seja de 0 a 10
+        var chute = parseInt(prompt("Digite seu chute "));
+
+        if (chute == numeroPensado) {
+            mostra("Você acertou, Parabéns!" );
+
+        } else {
+            
+            mostra("você errou! tente novamente.");
+        }
+        mostra("Número pensado pelo computador foi " + numeroPensado);
+    </script>
+</html>
