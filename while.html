@@ -78,6 +78,22 @@
 
         } 
         mostra("FIM!");
+        mostra("===================================================================");
+        mostra("<b>Total de gasto com eventos<b>")
+        var eventos = parseInt(prompt("número de eventos."));
+        var contador = 1;
+        var gastoEventos = 0;
+
+        while (contador <= eventos) {
+
+            var gasto = parseFloat(prompt("Total gasto com eventos."));
+            gastoEventos = eventos + gasto;
+            contador++; // pós imcremento, maneira simplificada (contador = contador + 1)
+
+        }
+        var media = gastoEventos / eventos;
+        mostra("A média de gastos é de " + media + " reais");
+        mostra("===================================================================");
     </script>
 
 </html>
