@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Herley Oliveira">
+    <title>Estrutura de Repetição</title>
+</head>
+<body>
+    <h1>Estrutura de repetição FOR</h1>
+</body>
+
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+
+        
+        for (var soma = 1; soma <= 10; soma++) {
+
+            mostra(7 * soma);
+        }
+        mostra("FIM!");
+        mostra("===========================================================================");
+
+         
+        for (var linha = 1; linha <= 3; linha++) {
+
+            for (var coluna = 1; coluna <= 10; coluna++) { // um for dentro de outro é chamado de 
+                                                          // repetições aninhadas .
+                document.write("*");
+            
+            }
+            pulaLinha();
+
+        }
+    </script>
+</html>
