@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Herley Oliveira">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input/>
+    <button>Tente ler meu pensamento</button>
+
+</body>
+
+    <script>
+
+        var pensamento = Math.round(Math.random() * 5);
+        var input = document.querySelector("input");
+        input.focus(); //documnet.querySelector verifica o que tem
+        // no mundo HTML e tras para o javaScript. 
+
+        function verifica() {
+            if (input.value == pensamento) {
+                alert("Você ACERTOU, parabéns");
+
+            } else {
+                alert("Você ERROU !!");
+
+            }
+
+            input.value = ""; // esse valor "" em branco irá limpar meu input .
+            input.focus(); // irá focar, para que possamos adicionar valor.
+        }
+
+        var button = document.querySelector("button");
+        button.onclick = verifica; // onclick significa que ao clicar no botão.
+        // o verifica sem os (), passar todo o seu conteúdo de seu código para dentro do onclick
+        //se eu usar verifica(), vou estar chamando a função resultamdo em falha no meu progama.
+    </script>
+</html>
