@@ -24,15 +24,21 @@
         }
         // aprendendo a trabalhar com condições.
         var numeroPensado = sorteia(10); // faz com que a escolha seja de 0 a 10
-        var chute = parseInt(prompt("Digite seu chute "));
+        var chances = 1;
 
-        if (chute == numeroPensado) {
-            mostra("Você acertou, Parabéns!" );
+        while (chances <= 3) {
+            var chute = parseInt(prompt("Digite seu chute "));
 
-        } else {
+            if (chute == numeroPensado) {
+                mostra("Você ACERTOU, Parabéns!" + numeroPensado);
+                break; // este comando serve para interromper uma repetição.
+
+            } else {
             
-            mostra("você errou! tente novamente.");
+                mostra("você ERROU! tente novamente.");
+            }
+            chances++;
         }
-        mostra("Número pensado pelo computador foi " + numeroPensado);
+        mostra("FIM !");
     </script>
 </html>
