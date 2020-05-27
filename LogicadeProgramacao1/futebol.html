@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Herley Oliveira">
+    <title>Trabalhando com o PROMPT</title>
+</head>
+<body>
+    
+</body>
+
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+        // Atenção com a função prompt, ele já entende como string
+        // caso você queira um retorno como número, é necessário que haja a conversão
+        // desta string para número, usando o comando abaixo.
+        document.write("<h2>Trabalhando com prompt</h2>");
+        document.write("<h2>Total de Pontos do SÃO PAULO</h2>"); 
+        var vitorias = parseInt(prompt("Número de vitórias de seu time."));
+        var empates = parseInt(prompt("Número de empates de seu time."));
+        var pontos = vitorias * 3 + empates;
+        mostra("Os pontos do seu time é " + pontos);
+
+        if (pontos > 30) {
+            mostra("seu Time está evoluindo.");
+        }
+        else if (pontos < 30) {
+            mostra("seu time precisa de reforços.");
+        }
+        else if (pontos == 30) {
+            mostra("seu time está razoável.");
+        }
+        mostra("BRASILEIRÃO 2020 !");
+    </script>
+</html>

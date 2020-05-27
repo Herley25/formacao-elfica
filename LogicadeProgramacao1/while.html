@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Herley Oliveira">
+    <title>Estrutura de Repetição</title>
+</head>
+<body>
+
+    <h1>Estrutura de Repetição WHILE</h1>
+
+</body>
+
+    <script>
+
+        function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+
+        var data = parseInt(prompt("Digite uma data."));
+        var anoCopa = 1930;
+
+        while (anoCopa <= data) {
+
+            mostra("Teve copa em " + anoCopa);
+            anoCopa += 4;
+        }
+        mostra("FIM!");
+
+        mostra("===================================================================");
+
+        
+        var contagem = 30;
+        while(contagem <= 40) {
+
+            if (contagem === 33) {
+                contagem += 1;
+            
+            }
+            if (contagem === 37) {
+                contagem += 1;
+
+            } else {
+
+                mostra(contagem);
+                contagem += 1;
+            }    
+
+        }
+
+        mostra("FIM da contagem!");
+
+        mostra("===================================================================");
+
+        var valor = 20;
+
+        while(valor >= 0) {
+
+            mostra(valor);
+            valor -= 1;
+
+        }
+        mostra("FIM !");
+
+        mostra("===================================================================");
+        mostra("<h2>TABUADA DE MULTIPLICAÇÃO</h2>")
+        var multiplica = 1;
+
+        while (multiplica <= 10) {
+
+            mostra(7 * multiplica);
+            multiplica += 1;
+
+        } 
+        mostra("FIM!");
+        mostra("===================================================================");
+        mostra("<b>Total de gasto com eventos<b>")
+        var eventos = parseInt(prompt("número de eventos."));
+        var contador = 1;
+        var gastoEventos = 0;
+
+        while (contador <= eventos) {
+
+            var gasto = parseFloat(prompt("Total gasto com eventos."));
+            gastoEventos = eventos + gasto;
+            contador++; // pós imcremento, maneira simplificada (contador = contador + 1)
+
+        }
+        var media = gastoEventos / eventos;
+        mostra("A média de gastos é de " + media + " reais");
+        mostra("===================================================================");
+    </script>
+
+</html>

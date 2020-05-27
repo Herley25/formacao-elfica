@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Herley Oliveira">
+    <title>Calculo de Consumo</title>
+</head>
+<body>
+    <h3>Álcool ou Gasolina ?</h3><br>
+</body>
+    <script>
+        var tanquelt = 40;
+        var trajetokm = 480;
+        var tanqueAlc = 40;
+        var trajetoAl = 300;
+        var consumoGas = (trajetokm/tanquelt);
+        var consumoAl = (trajetoAl/tanqueAlc);
+        document.write("tanque 40 litros <br>");
+        document.write("trajeto 480 quilômetros <br>");
+        document.write("utilizando Álcool 300 quilômetros <br>");
+        document.write("O consumo da gasolina é de " + Math.round(consumoGas) + " litros" + "<br>");
+        document.write("O consumo de Álcool será de " + Math.round(consumoAl) + " litros" + "<br>");
+    </script>
+</html>

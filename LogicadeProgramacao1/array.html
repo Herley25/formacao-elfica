@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Herley Oliveira">
+    <title>Document.Array</title>
+</head>
+<body>
+    <input/>
+    <button>Tente ler meu pensamento</button>
+</body>
+
+    <script>
+
+        var pensamento = [5,7,9,8,2];
+
+        var input = document.querySelector("input");
+        input.focus();
+
+        function verifica() {
+            var achou = false;
+
+            for (indice = 0; indice < pensamento.length; indice++) {
+
+                if (input.value == pensamento[indice]) {
+                    alert("Você ACERTOU, parabéns");
+                    achou = true;
+                    break;
+                }
+
+            }
+            if (achou == false){
+
+                alert("Você ERROU!");
+            }
+
+            input.value = ""; 
+            input.focus(); 
+        }
+
+        var button = document.querySelector("button");
+        button.onclick = verifica; 
+        // função push permite empurrar elementos para dentro da lista.
+
+        document.write("<h1>Não existe elemento repetido aqui<h1>");
+        var ingredientes = [];
+        var quantidade = parseInt(prompt("quantos você ira adicionar ?"));
+        var c = 1;
+
+        while (c <= quantidade) {
+            var elemento = prompt("informe o ingrediente" + c);
+            var possui = false;
+
+            for (indice = 0; indice < ingredientes.length; indice++);
+            
+                if (ingredientes[indice] == elemento) {
+
+                    possui = true;
+                    break;
+                }
+        }
+        
+        if (possui == false) {
+
+            ingredientes.push(elemento);
+            c++;
+
+        }
+        console.log(ingredientes);
+    </script>
+</html>
