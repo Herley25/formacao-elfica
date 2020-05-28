@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Herley Oliveira">
+    <title>Desenho JavaScript</title>
+</head>
+<body>
+    
+    <h2>Movendo elementos: animações simples</h2>
+    <canvas width="600" height="400"></canvas>
+
+</body>
+
+    <script>
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+        pincel.fillStyle = 'grey';
+        pincel.fillRect(0, 0, 600, 400);
+
+        function desenhaCirculo(x, y, raio) { // passando parâmetros para a minha função
+
+            pincel.fillStyle = 'blue';
+            pincel.beginPath(); //inicia meu caminho a percorrer
+            pincel.arc(x, y, raio, 0, 2 * Math.PI); // "Math.PI mesma coisa que 2 * 3.14"
+            pincel.fill();
+
+        }
+
+        function limpaTela() {
+
+            pincel.clearRect(0, 0, 600, 400); // ira limpar a bolinha.
+
+        }
+        
+        var x = 20;
+        function atualizaTela() {
+            limpaTela();
+            desenhaCirculo(x, 20, 10);
+            x++;
+        }
+
+        setInterval(atualizaTela, 20); // esta funçã aceita receber como parâmetro o nome da função que você queira chamar.
+
+
+    </script>
+</html>
