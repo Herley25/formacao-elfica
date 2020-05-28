@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Herley Oliveira">
+    <title>desenho javascript</title>
+</head>
+<body>
+    <h2>Continuação desenhando com JavaScript</h2>
+    <h3>Interagindo com Usuário</h3>
+
+    <canvas width="600" height="400"></canvas>
+
+</body>
+
+    <script>
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = 'grey';
+        pincel.fillRect(0, 0, 600, 400);
+
+        function desenhaBolinha(evento) {
+
+            var x = evento.pageX - tela.offsetLeft; // verifcando as coordenadas eixo "x".
+            var y = evento.pageY - tela.offsetTop; // verificando as coordenadas eixo "y".
+            pincel.fillStyle = 'blue';
+            pincel.beginPath(); // inicia um caminho para percorrer
+            pincel.arc(x, y, 10, 0, 2 * 3.14);
+            pincel.fill(); // preenche o espaço da bolinha que criei.            
+            console.log(x + ',' + y);
+
+            if (evento.shiftKey) { // "shiftKey" quando eu clico precionando a tecla SHIFT.
+                
+                alert('Você clicou precionando SHIFT!');
+                
+            }
+            
+        }
+
+        tela.onclick = desenhaBolinha;
+
+    </script>
+</html>
