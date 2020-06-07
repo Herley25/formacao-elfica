@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Herley Oliveira">
+    <title>Cenário e Bolinha</title>
+</head>
+<body>
+    <canvas width="600" height="400"></canvas>
+</body>
+
+    <script>
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = 'black';
+        pincel.fillRect(0, 0, 600, 400);
+
+
+        var velxBolinha = 5;
+        var velyBolinha = 5;
+
+        function circulo(xBolinha, yBolinha, diametro) {
+            pincel.fillStyle = 'white';
+            pincel.beginPath();
+            pincel.arc(xBolinha, yBolinha, diametro, 0, 2 * Math.PI);
+            pincel.fill();
+
+            if (xBolinha > width || xBolinha < 0) {
+                velxBolinha *= -1;
+            }
+            if (yBolinha > height || yBolinha < 0) {
+                velyBolinha *= -1;
+            }
+        }
+        circulo(300, 200, 11);
+
+
+
+
+    </script>
+</html>
